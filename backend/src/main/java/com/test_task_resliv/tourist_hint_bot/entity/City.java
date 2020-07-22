@@ -12,7 +12,7 @@ public class City {
     private String name;
     private String hint;
 
-    City(String name, String hint) {
+    public City(String name, String hint) {
         this.name = name;
         this.hint = hint;
     }
