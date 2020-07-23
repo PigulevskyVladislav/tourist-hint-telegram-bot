@@ -20,17 +20,26 @@ class CityTable extends Component {
       ));
   }
 
+  renderTableData() {
+    return this.state.items.map((city, index) => {
+      const {id, name, hint} = city
+      return (
+        <tr key={index}>
+          <td>{id}</td>
+          <td>{name}</td>
+          <td>{hint}</td>
+        </tr>
+      );
+    })
+  }
+
   render() {
+
     return (
       <table>
-        <tr>
-          <th>Город</th>
-          <th>Сообщение</th>
-        </tr>
-        <tr>
-          <td>{this.state.items.city}</td>
-          <td>{this.state.items.hint}</td>
-        </tr>
+        <tbody>
+          {this.renderTableData()}
+        </tbody>
       </table>
     )
   }
