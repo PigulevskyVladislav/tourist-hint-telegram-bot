@@ -1,16 +1,17 @@
 package com.test_task_resliv.tourist_hint_bot.entity;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
+@Table(name = "city")
 public class City {
 
     private @Id @GeneratedValue Long city_id;
-    private String name;
+    private @Column(name="city_name") String name;
     private String hint;
+
+    public City() { }
 
     public City(String name, String hint) {
         this.name = name;

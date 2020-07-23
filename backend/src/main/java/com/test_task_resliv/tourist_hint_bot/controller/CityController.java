@@ -17,7 +17,15 @@ public class CityController {
     }
 
     @GetMapping("/cities")
+
     List<City> all() {
+//        try {
+//            System.out.println(repository.findAll());
+//            System.out.println("Lol!");
+//        } catch (Exception ex) {
+//            System.out.println("!!!" + ex.getMessage());
+//            System.out.println("Lol!");
+//        }
         return repository.findAll();
     }
 }
