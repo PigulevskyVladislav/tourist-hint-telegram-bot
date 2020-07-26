@@ -37,8 +37,16 @@ class CityUpdate extends Component {
             'Content-Type': 'application/json'
         }
     }).then(res => {
-        return res;
-    }, callback()).catch(error => error);
+      if (res.ok) {
+        callback();
+      } else {
+        alert('Ошибка при сохранении');
+      }
+      return res;
+    }).catch(err => {
+      alert('Ошибка соединения');
+      return err;
+    });
   }
 
   handleCityChange = (newName) => {

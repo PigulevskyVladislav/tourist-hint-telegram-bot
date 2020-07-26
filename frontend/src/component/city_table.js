@@ -26,7 +26,10 @@ class CityTable extends Component {
         method: 'DELETE'
     }).then(res => {
         return res;
-    }).catch(error => error)
+    }).catch(err => {
+      alert('Ошибка удаления');
+      return err;
+    });
   }
 
   handleDeleteClick(id) {
@@ -39,10 +42,6 @@ class CityTable extends Component {
       console.error("Can't delete city", error)
     })
   }
-
-  // handleUpdateClick(id) {
-  //   return <Redirect to='/cities/update/{id}' />
-  // }
 
   renderTableData() {
     return this.state.items.map((city, index) => {

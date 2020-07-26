@@ -21,8 +21,16 @@ class CityInsert extends Component {
             'Content-Type': 'application/json'
         }
     }).then(res => {
+        if (res.ok) {
+          callback();
+        } else {
+          alert('Ошибка при сохранении');
+        }
         return res;
-    }, callback()).catch(err => err);
+    }).catch(err => {
+      alert('Ошибка соединения');
+      return err;
+    });
 
     
   }

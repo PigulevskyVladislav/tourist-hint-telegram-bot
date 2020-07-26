@@ -4,7 +4,7 @@ import CityList from './page/city_list';
 import CityInsert from './page/city_insert';
 import CityUpdate from './page/city_update';
 import NotFoundPage from './page/not_found_page';
-import './App.css';
+import './css/default.css';
 
 function App() {
   return (
