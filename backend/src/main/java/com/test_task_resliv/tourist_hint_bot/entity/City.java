@@ -7,7 +7,9 @@ import java.util.Objects;
 @Table(name = "city")
 public class City {
 
-    private @Id @GeneratedValue Long city_id;
+    private @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(updatable = false, nullable = false) Long city_id;
     private @Column(name="city_name") String name;
     private String hint;
 
