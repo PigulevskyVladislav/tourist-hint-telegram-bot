@@ -10,9 +10,13 @@ class CityList extends Component {
 
   render() {
     return (
-      <div>
+      <div id='main_div'>
         <CityTable />
-        <Link to={'/cities/create'}> Добавить запись </Link>
+        <Link to={'/cities/create'} 
+              className='button'
+              id='add_button'> 
+          Добавить запись 
+        </Link>
       </div>
     )
   }

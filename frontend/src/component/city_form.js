@@ -36,6 +36,7 @@ class CityForm extends Component {
           <label>Город</label>
           <div>
             <input type="text"
+                   maxlength = "25"
                    required="required"
                    value={this.props.name}
                    onChange={this.handleCityChange}
@@ -45,10 +46,11 @@ class CityForm extends Component {
         <div>
           <label>Сообщение</label>
           <div>
-            <input type="text"
-                   required="required"
-                   value={this.props.hint}
-                   onChange={this.handleHintChange}/>
+            <textarea type="text"
+                      id="input_area"
+                      required="required"
+                      value={this.props.hint}
+                      onChange={this.handleHintChange}/>
           </div>
         </div>
         <div>

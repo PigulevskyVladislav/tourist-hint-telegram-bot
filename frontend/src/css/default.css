@@ -1,14 +1,41 @@
 table {
   border-collapse: collapse;
-  margin: 5vh;
+  table-layout: fixed;
+  height: 70vh;
+}
+
+form {
+  position: absolute;
+  margin: 10vh;
 }
 
 th, td {
-  border: 1px solid black;
-  font-size: 2.5vh;
+  border: 0.3vh solid black;
+  font-size: 3vh;
 }
 
-button {
+td {
+  max-width: 80vh;
+  max-height: 1vh;
+  padding-left: 1vh;
+  padding-right: 1vh; 
+}
+
+.textarea {
+  overflow: -moz-hidden-unscrollable;
+  display: flex;
+  resize: none;
+  height: 100%;
+  width: 40vh;
+  outline: none;
+  text-overflow: ellipsis;
+	-moz-appearance: none;
+  border: hidden;
+  white-space: pre-wrap;
+  font-size: 2vh;
+}
+
+.button {
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
@@ -17,5 +44,37 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 3vh;
+  
+}
+
+.button_column {
+  display: flex;
+  flex-direction: row;
+}
+
+.button.column_buttons {
+  margin: 0.5vh;
+}
+
+#add_button {
+  float: right;
+  right: 0;
+  margin-top: 5vh;
+  padding-right: 8.25vh;
+  padding-left:  8.25vh;
+}
+
+#main_div {
+  margin: 5vh;
+  position: absolute;
+  flex-direction: column;
+}
+
+#input_area {
+  resize: none;
+  outline: none;
+	-moz-appearance: none;
+  width: 60vh;
+  height: 40vh;
 }
 

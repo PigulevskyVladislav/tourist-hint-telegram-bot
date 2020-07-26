@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import PaginacionTabla from './paginacion_table';
 
 class CityTable extends Component {
   constructor(props) {
@@ -49,15 +50,25 @@ class CityTable extends Component {
       return (
         <tr key={index} id={id}>
           <td>{name}</td>
-          <td>{hint}</td>
           <td>
-            <button onClick={() => 
-                this.handleDeleteClick(id)}>
-              Удалить
-            </button>
+            <textarea className='textarea'
+                      readOnly={true}
+                      value={hint}>
+            </textarea>
           </td>
           <td>
-            <Link to={'/cities/update/' + id}> Изменить </Link>
+            <div className='button_column'>
+              <button onClick={() => 
+                        this.handleDeleteClick(id)}
+                      className='button column_buttons'>
+                Удалить
+              </button>
+
+              <Link to={'/cities/update/' + id}
+                    className='button column_buttons'>
+                Изменить 
+              </Link>
+            </div>
           </td>
         </tr>
       );
@@ -65,19 +76,22 @@ class CityTable extends Component {
   }
 
   render() {
-
+    let data = this.renderTableData();
     return (
       <table>
         <thead>
           <tr>
             <th>Город</th>
             <th>Сообщение</th>
+            <th />
           </tr>
         </thead>
-
-        <tbody>
-          {this.renderTableData()}
-        </tbody>
+        <PaginacionTabla
+          itemsperpage={4}
+          nocolumns={3}
+          items={data}
+          pagesspan={1}
+        />
       </table>
     )
   }
