@@ -18,7 +18,7 @@
 		<java.version>1.8</java.version>
 		<postgresql.version>42.2.14</postgresql.version>
 		<hibernate.version>5.4.18.Final</hibernate.version>
-		<c3p0.version>0.9.5.2</c3p0.version>
+		<c3p0.version>0.9.5.4</c3p0.version>
 		<hikaricp.version>3.4.5</hikaricp.version>
 		<telegrambots.version>4.9</telegrambots.version>
 	</properties>
