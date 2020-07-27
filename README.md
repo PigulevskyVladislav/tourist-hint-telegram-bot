@@ -13,21 +13,21 @@ https://www.postgresql.org/download/
 https://www.pgadmin.org/download/
 
 ## Telegram bot data
-Bot Login: tourist_hint_telegram_bot
-Bot Token: 1355450414:AAEszl0etR782pNjQ_bKy3hs_L3w-oSZ_Io
+  Bot Login: tourist_hint_telegram_bot
+  Bot Token: 1355450414:AAEszl0etR782pNjQ_bKy3hs_L3w-oSZ_Io
 
 ## Prelaunch
-Before launch application you need to create and fill database.
-You can try to do it by launch ***create_data_base.bat*** in database folder.
-But if its failed you can copy data from ***dbScritp.sql*** file with same location and execute it with pgAdmin.
+  Before launch application you need to create and fill database.
+  You can try to do it by launch ***create_data_base.bat*** in database folder.
+  But if its failed you can copy data from ***dbScritp.sql*** file with same location and execute it with pgAdmin.
 
 ## Launch
-You need to check that your PostgreSQL server is working.
-Then you have to do next steps: 
+  You need to check that your PostgreSQL server is working.
+  Then you have to do next steps: 
 - At first you need to start ***start.bat*** file in the backend folder.
 - Secondary you need to start ***start.bat*** file in the frontend folder.
 
 ## Stop
-To turn off backend/frontend you need to press **Ctrl + C** combination in termenal which was opened by launch ***start.bat***.
+  To turn off backend/frontend you need to press **Ctrl + C** combination in termenal which was opened by launch ***start.bat***.
 
 
