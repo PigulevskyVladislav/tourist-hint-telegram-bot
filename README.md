@@ -33,6 +33,27 @@ https://www.pgadmin.org/download/
 
 - Secondary you need to start ***start.bat*** file in the frontend folder.
 
+  To get hint by bot, you just need to write city to bot in chat. 
+  
+## List of available cities
+  -брест
+  
+  -витебск
+  
+  -гродно
+  
+  -гомель
+  
+  -несвиж
+  
+  -новогрудок
+  
+  -полоцк
+  
+  -пинск
+  
+  -слоним
+
 ## Stop
   To turn off backend/frontend you need to press **Ctrl + C** combination in termenal which was opened by launch ***start.bat***.
 
