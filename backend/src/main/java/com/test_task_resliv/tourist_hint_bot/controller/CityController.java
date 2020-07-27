@@ -31,6 +31,12 @@ public class CityController {
          .orElseThrow(() -> new CityNotFoundException(id));
     }
 
+    @CrossOrigin
+    @GetMapping("/cities/name/{name}")
+    String oneByName(@PathVariable String name) {
+        return repository.getHintByName(name);
+    }
+
 
 //    City createCity(@PathVariable City newCity) {
 //        return repository.save(newCity);
@@ -39,7 +45,7 @@ public class CityController {
     @PostMapping("/cities")
     City createCity(@RequestBody Map<String, String> params) {
         return repository.save(new City(
-                params.get("name"),
+                params.get("name").toLowerCase().trim(),
                 params.get("hint")
         ));
     }
@@ -57,7 +63,7 @@ public class CityController {
                 })
                 .orElseGet(() -> {
                     City newCity = new City(
-                            params.get("name"),
+                            params.get("name").toLowerCase().trim(),
                             params.get("hint")
                     );
                     newCity.setId(id);
